@@ -174,3 +174,4 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/python,pycharm
 tests/mysql-changelog-decoded.txt
+tests/live_hommati_schema.sql

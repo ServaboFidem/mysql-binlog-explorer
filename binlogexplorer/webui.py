@@ -67,7 +67,7 @@ def binlog_parser_presenter(list_of_transactions):
 def parse_cli_arguments():
     cli = argparse.ArgumentParser(description='Parses MySQL binlogs')
     cli.add_argument('files', type=argparse.FileType('r', encoding='utf-8'), nargs='+', help='binlog files to proccess')
-    cli.add_argument('--schema-ddl', type=argparse.FileType('r', encoding='utf-8'), dest='schema_ddl', help='.ddl file with the \'create\' statements to '
+    cli.add_argument('--schema-ddl', type=argparse.FileType('r'), dest='schema_ddl', help='.ddl file with the \'create\' statements to '
                                                                         'figure out the name of the columns.')
     cli.add_argument('--tenant-identifier', dest='group_identifier', help='name of the column that identify tenant')
     cli.add_argument('-v', '--version', action='version', version=get_version())
