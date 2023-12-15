@@ -1,3 +1,7 @@
+CREDITS:  Credit is due to the original author of this utility, Israel Fonseca.
+
+Updates have been made to allow compatibility with Python 3.x
+
 # mysql-binlog-explorer
 
 MySQL binlogs are the foundation for replication, but them can be useful for tracking intense write operations on database when using `binlog_format=ROW`. With that we can see all the changes that are actually applied to the database. For example: a statement like `delete from table where timestamp > ?` could affect just 3 or 1 million rows. Besides that, sometimes we have tons of very fast statements, but when composed together in a transaction it can takes lots of time.
